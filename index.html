@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじアプリ</title>
+</head>
+<body>
+    <div style="text-align:center"> 
+    <div style="background-color: #f3eba6f5">
+    <br>
+    <h1>今日の運勢は</h1>
+    <input type="button" value="引く" onclick="Fortune();"></input>
+    <div id="result"></div>
+    <img id="image" src="https://irasutohonpo.com/wp-content/uploads/2018/05/%E3%81%8A%E3%81%BF%E3%81%8F%E3%81%98%E3%81%AE%E7%84%A1%E6%96%99%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88.png"><br>
+    </div>
+    </div>
+
+  <script>
+    // おみくじ関数
+    function Fortune() {
+      let array = ['大吉','中吉','小吉','末吉','凶','大凶'];
+      let value = array[Math.floor(Math.random() * array.length)];
+      let id1 = document.querySelector('#result');
+      
+      id1.style.textAlign = "center";
+      id1.style.fontSize = "50pt";
+      id1.style.color = "green";
+      id1.innerHTML = value;
+    }
+  </script>
+</body>
+</html>
